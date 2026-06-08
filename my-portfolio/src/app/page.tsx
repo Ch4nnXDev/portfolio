@@ -1,8 +1,8 @@
 
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
+import Hero from "./my-components/Hero";
+import Skills from "./my-components/Skills";
+import Experience from "./my-components/Experience";
+import Projects from "./my-components/Projects";
 
 export default function Home() {
   return (
