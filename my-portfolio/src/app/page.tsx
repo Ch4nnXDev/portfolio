@@ -1,17 +1,17 @@
-import Image from "next/image";
-import Header from "./components/default/Header";
-import Footer from "./components/default/Footer";
+
 import Hero from "./components/Hero";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
     <section className="flex flex-col w-full h-full">
-      <Header />
+
       <Hero />
-
-      <Footer />
-      
-
+      <Skills />
+      <Experience />
+      <Projects />
     </section>
   
   );
