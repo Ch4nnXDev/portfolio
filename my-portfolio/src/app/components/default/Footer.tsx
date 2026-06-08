@@ -1,12 +1,12 @@
 export default function Footer() {
     return (
-        <section>
-        <div>
+        <section className="flex flex-col p-4 w-full bg-black text-white">
+        <div className="flex flex-row">
             <div></div>
             <div></div>
             <div></div>
         </div>
-        <div>
+        <div className="flex flex-row text-center mt-4">
 
         </div>
     </section>
