@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "./components/default/Footer";
+import Header from "./components/default/Header";
+
+export const metadata: Metadata = {
+  title: "Channa Karawita Portfolio",
+  description: "A showcase of my skills and projects.",
+};
 
 
 export default function RootLayout({
@@ -11,7 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
