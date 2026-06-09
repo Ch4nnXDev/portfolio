@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-
+import { Carousel } from "@/components/ui/carousel";
+import { Card } from "@/components/ui/card";
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState(null);
     const projects =[
@@ -33,7 +34,9 @@ export default function Projects() {
     return (
         <section className="flex flex-col p-4 w-full">
             <h2 className="text-3xl font-bold mb-4">Projects</h2>
-            <div></div>
+            <div className="flex text-black m-6 p-4">
+                <Carousel></Carousel>
+            </div>
 
         </section>
     );
