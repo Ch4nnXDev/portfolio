@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <header>
-            <nav className="flex items-center gap-10 bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl rounded-full px-8 py-4">
+            <nav className="flex items-center gap-10 bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl rounded-full mt-50 px-8 py-4">
                 <ul className="flex space-x-4  justify-between gap-10">
                     <li><a href="#hero" className="text-lg font-medium">Home</a></li>
                     <li><a href="#projects" className="text-lg font-medium">Projects</a></li>
