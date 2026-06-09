@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "./my-components/default/Footer";
 import Header from "./my-components/default/Header";
-import { JetBrains_Mono } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { Playfair_Display } from "next/font/google";
 
-const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
+
+const playfairDisplay = Playfair_Display({
+   subsets: ['latin']});
 
 export const metadata: Metadata = {
   title: "Channa Karawita Portfolio",
@@ -19,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-mono", jetbrainsMono.variable)}>
+    <html lang="en" className={playfairDisplay.className}>
       <body className="flex flex-col"
       >
         <Header />
