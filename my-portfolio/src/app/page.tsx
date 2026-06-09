@@ -6,12 +6,12 @@ import Projects from "./my-components/Projects";
 
 export default function Home() {
   return (
-    <section className="flex flex-col w-full bg-white text-black h-full">
+    <main className="min-h-screen bg-gradient-to-br from-slate-100 via-white to-slate-200">
       <Hero />
       <Skills />
       <Experience />
       <Projects />
-    </section>
+    </main>
   
   );
 }
