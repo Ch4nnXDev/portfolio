@@ -6,7 +6,7 @@ import Projects from "./my-components/Projects";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-100 via-white to-slate-200">
+    <main className="min-h-screen bg-black">
       <Hero />
       <Skills />
       <Experience />
