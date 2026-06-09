@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <section className="flex flex-col p-4 w-full bg-black text-white">
+        <section className="flex flex-col p-4 w-full text-white">
         <div className="flex flex-row">
             <div></div>
             <div></div>
