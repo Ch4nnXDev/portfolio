@@ -39,7 +39,7 @@ export default function Projects() {
                     <CarouselContent>
                         {projects.map((project) => (
                             <CarouselItem key={project.title}>
-                                <Card className="w-full h-full m-10 p-4 bg-white rounded-lg shadow-md">
+                                <Card className="w-full h-full m-10 p-4  rounded-lg shadow-md">
                                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                                     <p className="mb-2">{project.description}</p>
                                     <div className="flex flex-wrap gap-2">
