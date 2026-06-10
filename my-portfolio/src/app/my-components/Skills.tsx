@@ -23,9 +23,9 @@ export default function Skills() {
      
     ]
     return (
-        <section className="flex flex-col p-4 w-full bg-red-400">
+        <section className="flex flex-col p-4 w-full items-center h-[50%]">
             <h2 className="text-3xl font-bold mb-4">Skills</h2>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-row gap-6 items-center">
                 {skills.map((skill, index) => (
                     <div key={index} className="flex flex-col p-4 rounded-lg">
                         <h3 className="text-xl font-semibold mb-2">{skill.category}</h3>
