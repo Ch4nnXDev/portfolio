@@ -1,6 +1,6 @@
 export default function Me() {
     return (
-        <section className="flex flex-col border-2">
+        <section className="flex flex-col">
             <div className="flex flex-col items-center">
                 <h1 className="font-lg text-3xl">
                     Get to Know Me
