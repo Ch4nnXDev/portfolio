@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Hero() {
     return (
-        <section className="flex flex-col p-4 w-full h-screen text-black items-center justify-center gap-20">
+        <section className="flex flex-col p-4 w-full text-black items-center justify-center gap-20">
             <div className="flex flex-col items-center">
                 <Image src="/profile.jpeg" alt="Profile Picture" width={300} height={400} className="rounded-full mb-4 self-center" />
             </div>
