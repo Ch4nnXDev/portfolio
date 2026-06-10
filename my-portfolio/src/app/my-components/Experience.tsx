@@ -4,12 +4,16 @@ export default function Experience() {
             title: "Software Engineer Intern",
             company: "SLT Headquarters",
             duration: "June 16 2025 - May 16 2026",
+            projects: "",
+            description: ""
             
         },
         {
             title: "In-house Web Developer and Digital Marketing Executive",
             company: "Davinci Ceramics",
-            duration: "Febraury 2026 - Present"
+            duration: "Febraury 2026 - Present",
+            projects: "",
+            description: ""
         }
 
     ]
