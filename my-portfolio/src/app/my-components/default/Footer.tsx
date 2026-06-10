@@ -1,13 +1,11 @@
 export default function Footer() {
     return (
-    <footer className="bg-red-400 w-full">
-        <div className="flex flex-row text-black font-lg">
-            <div>Contact No: 0712770585</div>
-            <div>Location: Kelaniya</div>
-            
+    <footer className="flex flex-col w-full items-center p-20">
+        <div className="text-black font-lg">
+            <div>All rights reserved © Channa Laksen Karawita</div>
         </div>
-        <div className="flex flex-row text-center">
-
+        <div className="">
+            <div className="text-black font-medium">Created in 2026</div>
         </div>
     </footer>
     );
