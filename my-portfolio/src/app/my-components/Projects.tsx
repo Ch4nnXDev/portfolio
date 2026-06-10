@@ -32,14 +32,14 @@ export default function Projects() {
 
     ]
     return (
-        <section className="flex flex-col p-4 w-full p-10">
-            <h2 className="text-3xl font-bold mb-4 justify-center">Projects</h2>
+        <section className="flex flex-col p-4 w-full p-10 items-center">
+            <h2 className="text-3xl font-bold mb-4">Projects</h2>
             <div className="flex text-black m-6 p-4">
                 <Carousel>
                     <CarouselContent>
                         {projects.map((project) => (
                             <CarouselItem key={project.title}>
-                                <Card className="w-full h-full m-10 p-4  rounded-lg shadow-md">
+                                <Card className="w-full h-full mb-10 p-4 ">
                                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                                     <p className="mb-2">{project.description}</p>
                                     <div className="flex flex-wrap gap-2">
