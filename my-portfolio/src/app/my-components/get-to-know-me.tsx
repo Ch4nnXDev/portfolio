@@ -1,11 +1,11 @@
 export default function Me() {
     return (
-        <section className="flex flex-col">
+        <section className="flex flex-col border-2">
             <div className="flex flex-col items-center">
                 <h1 className="font-lg text-3xl">
                     Get to Know Me
                 </h1>
-                <h2 className="font-medium text-xl text-grey">
+                <h2 className="font-medium text-xl text-gray-500">
                     Current Standing 
                 </h2>
             </div>
