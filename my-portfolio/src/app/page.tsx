@@ -6,13 +6,13 @@ import Projects from "./my-components/Projects";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <>
       <Hero />
       <Me />
       <Skills />
       <Experience />
       <Projects />
-    </main>
+    </>
   
   );
 }
