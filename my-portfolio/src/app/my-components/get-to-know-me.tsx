@@ -1,16 +1,16 @@
 export default function Me() {
     return (
         <section className="flex flex-col">
-            <div className="flex flex-col">
-                <h1 className="font-medium">
+            <div className="flex flex-col items-center">
+                <h1 className="font-lg text-3xl">
                     Get to Know Me
                 </h1>
-                <h2 className="font-medium">
+                <h2 className="font-medium text-xl text-grey">
                     Current Standing 
                 </h2>
             </div>
-            <div className="">
-                <p className="text-black text-lg">
+            <div className="flex items-center">
+                <p className="text-black text-lg m-20 p-20">
                     had my secondary Education from Anuradhapura Central College Attended A/Levels in Biology Science Stream.
                     Currently a Final Year Student of Informatics Institue of Technology, Sri lanka which is a affiliation of University of Westminster.
                     During My Year i have commited into AI Model Architecture and Backend Engineering which involves Network Engineering and Distributed Architecture.
