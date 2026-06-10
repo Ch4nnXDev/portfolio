@@ -1,15 +1,15 @@
 export default function Footer() {
     return (
-        <section className="flex flex-col p-4 w-full text-white">
-        <div className="flex flex-row">
-            <div></div>
-            <div></div>
-            <div></div>
+    <footer className="bg-red-400 w-full">
+        <div className="flex flex-row text-black font-lg">
+            <div>Contact No: 0712770585</div>
+            <div>Location: Kelaniya</div>
+            
         </div>
-        <div className="flex flex-row text-center mt-4">
+        <div className="flex flex-row text-center">
 
         </div>
-    </section>
+    </footer>
     );
     
 }
