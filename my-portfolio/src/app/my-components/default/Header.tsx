@@ -3,7 +3,7 @@ export default function Header() {
     <header className="fixed top-5 left-20 translate-x-1/2">
       <nav className="flex items-center gap-10 bg-transparent backdrop-blur-xl border border-white/20 shadow-xl rounded-full px-30 py-8">
         <ul className="flex items-center gap-10">
-          <li><a href="#hero" className="text-xl font-semibold hover:text-blue-800">Home</a></li>
+          <li><a href="#home" className="text-xl font-semibold hover:text-blue-800">Home</a></li>
           <li><a href="#projects" className="text-xl font-semibold hover:text-blue-800">Projects</a></li>
           <li><a href="#skills" className="text-xl font-semibold hover:text-blue-800">Skills</a></li>
           <li><a href="#experience" className="text-xl font-semibold hover:text-blue-800">Experience</a></li>
