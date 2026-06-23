@@ -19,7 +19,7 @@ export default function Skills() {
             },
             {
                 name: "Java",
-                icon: "icons/express-svgrepo-com.svg"
+                icon: "icons/java-ar21.svg"
             },
         ]
         },
@@ -42,6 +42,10 @@ export default function Skills() {
                 name: "ExpressJs",
                 icon: "icons/express-svgrepo-com.svg"
             },
+            {
+                name: "Springboot",
+                icon: "icons/spring-boot-icon.svg"
+            }
         ]
             
         },
@@ -50,7 +54,7 @@ export default function Skills() {
             items: [
                 {
                 name: "MongoDB",
-                icon: "icons/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                icon: "icons/mongodb-logo-svgrepo-com.svg"
             },
             {
                 name: "MySQL",
@@ -58,11 +62,7 @@ export default function Skills() {
             },
             {
                 name: "PostgreSQL",
-                icon: "icons/node-js-svgrepo-com.svg"
-            },
-            {
-                name: "ExpressJs",
-                icon: "icons/express-svgrepo-com.svg"
+                icon: "icons/postgresql-logo-svgrepo-com.svg"
             },
         ]
         },
@@ -71,7 +71,7 @@ export default function Skills() {
             items: [
                 {
                 name: "Git",
-                icon: "icons/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                icon: "icons/github-142-svgrepo-com.svg"
             },
             {
                 name: "Docker",
@@ -79,11 +79,11 @@ export default function Skills() {
             },
             {
                 name: "AWS",
-                icon: "icons/node-js-svgrepo-com.svg"
+                icon: "icons/aws-svgrepo-com.svg"
             },
             {
                 name: "Vercel",
-                icon: "icons/express-svgrepo-com.svg"
+                icon: "icons/vercel-svgrepo-com.svg"
             },
         ]
         },
