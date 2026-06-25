@@ -21,6 +21,10 @@ export default function Skills() {
                 name: "Java",
                 icon: "icons/java-ar21.svg"
             },
+            {
+                name: "PHP",
+                icon: "icons/PHP.svg"
+            }
         ]
         },
         {
@@ -45,6 +49,10 @@ export default function Skills() {
             {
                 name: "Springboot",
                 icon: "icons/spring-boot-icon.svg"
+            },
+            {
+                name: "Angular",
+                icon: "icons/Angular.svg"
             }
         ]
             
@@ -74,17 +82,18 @@ export default function Skills() {
                 icon: "icons/github-142-svgrepo-com.svg"
             },
             {
-                name: "Docker",
-                icon: "icons/nextjs-svgrepo-com.svg"
+                name: "vscode",
+                icon: "icons/Visual Studio Code (VS Code).svg"
             },
             {
-                name: "AWS",
-                icon: "icons/aws-svgrepo-com.svg"
+                name: "intelij",
+                icon: "icons/IntelliJ IDEA.svg"
             },
             {
-                name: "Vercel",
-                icon: "icons/vercel-svgrepo-com.svg"
-            },
+                name: "postman",
+                icon: "icons/Postman.svg"
+            }
+       
         ]
         },
         {
@@ -106,7 +115,36 @@ export default function Skills() {
                 name: "Flan T-5",
                 icon: "icons/express-svgrepo-com.svg"
             },
+            {
+                name: "scikit-learn.svg",
+                icon: "icons/scikit-learn.svg"
+            }
         ]
+        },
+        {
+            category: "Cloud & Infrastructure",
+            items: [
+                {
+                    name: "AWS",
+                    icon: "icons/aws-svgrepo-com.svg"
+                },
+                {
+                    name: "Azure",
+                    icon: "icons/azure-svgrepo-com.svg"
+                },
+                {
+                    name: "Vercel",
+                    icon: "icons/vercel-svgrepo-com.svg"
+                },
+                {
+                    name: "Apache Kafka",
+                    icon: "icons/Apache Kafka.svg"
+                },
+                {
+                    name: "Cloudflare",
+                    icon: "icons/Cloudflare.svg"
+                }
+            ]
         }
      
     ]
@@ -115,7 +153,7 @@ export default function Skills() {
             <h2 className="text-3xl font-bold mb-8">Skills</h2>
             <div className="flex flex-row gap-6 p-8 items-center">
                 {skills.map((skill, index) => (
-                    <div key={index} className="flex flex-col p-4 rounded-lg">
+                    <div key={index} className="flex flex-col p-25 rounded-lg shadow-md">
                         <h3 className="text-xl font-semibold mb-2">{skill.category}</h3>
                         <div className="flex flex-wrap gap-2">
                             {skill.items.map((item) => (
