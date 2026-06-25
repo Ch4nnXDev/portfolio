@@ -7,23 +7,29 @@ export default function Skills() {
             items: [
                 {
                 name: "JavaScript",
-                icon: "icons/javascript-svgrepo-com.svg"
+                icon: "icons/javascript-svgrepo-com.svg",
+                proficiency: "Advanced"
             },
             {
                 name: "TypeScript",
-                icon: "icons/typescript-svgrepo-com.svg"
+                icon: "icons/typescript-svgrepo-com.svg",
+                proficiency: "Advanced"
             },
             {
                 name: "Python",
-                icon: "icons/python-svgrepo-com.svg"
+                icon: "icons/python-svgrepo-com.svg",
+                proficiency: "Advanced"
             },
             {
                 name: "Java",
-                icon: "icons/java-ar21.svg"
+                icon: "icons/java-ar21.svg",
+                proficiency: "Advanced"
+
             },
             {
                 name: "PHP",
-                icon: "icons/PHP.svg"
+                icon: "icons/PHP.svg",
+                proficiency: "intermediate"
             }
         ]
         },
@@ -32,27 +38,39 @@ export default function Skills() {
             items: [
                 {
                 name: "React",
-                icon: "icons/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                icon: "icons/react-javascript-js-framework-facebook-svgrepo-com.svg",
+                proficiency: "Intermediate"
+                
             },
             {
                 name: "NextJs",
-                icon: "icons/nextjs-svgrepo-com.svg"
+                icon: "icons/nextjs-svgrepo-com.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "NodeJs",
-                icon: "icons/node-js-svgrepo-com.svg"
+                icon: "icons/node-js-svgrepo-com.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "ExpressJs",
-                icon: "icons/express-svgrepo-com.svg"
+                icon: "icons/express-svgrepo-com.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "Springboot",
-                icon: "icons/spring-boot-icon.svg"
+                icon: "icons/spring-boot-icon.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "Angular",
-                icon: "icons/Angular.svg"
+                icon: "icons/Angular.svg",
+                proficiency: "Intermediate"
+            },
+            {
+                name: "FastAPI",
+                icon: "icons/FastAPI.svg",
+                proficiency: "Intermediate"
             }
         ]
             
@@ -62,15 +80,18 @@ export default function Skills() {
             items: [
                 {
                 name: "MongoDB",
-                icon: "icons/mongodb-logo-svgrepo-com.svg"
+                icon: "icons/mongodb-logo-svgrepo-com.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "MySQL",
-                icon: "icons/nextjs-svgrepo-com.svg"
+                icon: "icons/nextjs-svgrepo-com.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "PostgreSQL",
-                icon: "icons/postgresql-logo-svgrepo-com.svg"
+                icon: "icons/postgresql-logo-svgrepo-com.svg",
+                proficiency: "Intermediate"
             },
         ]
         },
@@ -79,19 +100,23 @@ export default function Skills() {
             items: [
                 {
                 name: "Git",
-                icon: "icons/github-142-svgrepo-com.svg"
+                icon: "icons/github-142-svgrepo-com.svg",
+                
             },
             {
                 name: "vscode",
-                icon: "icons/Visual Studio Code (VS Code).svg"
+                icon: "icons/Visual Studio Code (VS Code).svg",
+                
             },
             {
                 name: "intelij",
-                icon: "icons/IntelliJ IDEA.svg"
+                icon: "icons/IntelliJ IDEA.svg",
+                
             },
             {
                 name: "postman",
-                icon: "icons/Postman.svg"
+                icon: "icons/Postman.svg",
+                
             }
        
         ]
@@ -101,23 +126,43 @@ export default function Skills() {
             items: [
                 {
                 name: "TensorFlow",
-                icon: "icons/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                icon: "icons/TensorFlow.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "PyTorch",
-                icon: "icons/nextjs-svgrepo-com.svg"
+                icon: "icons/PyTorch.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "Langchain",
-                icon: "icons/node-js-svgrepo-com.svg"
+                icon: "icons/Langchain.svg",
+                proficiency: "Intermediate"
             },
             {
-                name: "Flan T-5",
-                icon: "icons/express-svgrepo-com.svg"
+                name: "HuggingFace",
+                icon: "icons/express-svgrepo-com.svg",
+                proficiency: "Intermediate"
             },
             {
                 name: "scikit-learn.svg",
-                icon: "icons/scikit-learn.svg"
+                icon: "icons/scikit-learn.svg",
+                proficiency: "Intermediate"
+            },
+            {
+                name: "Numpy",
+                icon: "icons/PyTorch.svg",
+                proficiency: "Intermediate"
+            },
+            {
+                name: "Pandas",
+                icon: "icons/Pandas.svg",
+                proficiency: "Intermediate"
+            },
+            {
+                name: "HuggingFace",
+                icon: "icons/huggingface.svg",
+                proficiency: "Intermediate"
             }
         ]
         },
@@ -126,23 +171,28 @@ export default function Skills() {
             items: [
                 {
                     name: "AWS",
-                    icon: "icons/aws-svgrepo-com.svg"
+                    icon: "icons/aws-svgrepo-com.svg",
+                    proficiency: "Intermediate"
                 },
                 {
                     name: "Azure",
-                    icon: "icons/azure-svgrepo-com.svg"
+                    icon: "icons/azure-svgrepo-com.svg",
+                    proficiency: "Intermediate"
                 },
                 {
                     name: "Vercel",
-                    icon: "icons/vercel-svgrepo-com.svg"
+                    icon: "icons/vercel-svgrepo-com.svg",
+                    proficiency: "Intermediate"
                 },
                 {
                     name: "Apache Kafka",
-                    icon: "icons/Apache Kafka.svg"
+                    icon: "icons/Apache Kafka.svg",
+                    proficiency: "Intermediate"
                 },
                 {
                     name: "Cloudflare",
-                    icon: "icons/Cloudflare.svg"
+                    icon: "icons/Cloudflare.svg",
+                    proficiency: "Intermediate"
                 }
             ]
         }
