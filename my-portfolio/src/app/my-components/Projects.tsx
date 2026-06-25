@@ -14,7 +14,7 @@ export default function Projects() {
             },
             {
                 name: "Socket.io",
-                icon: ""
+                
 
             },
             {

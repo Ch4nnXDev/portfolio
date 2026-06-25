@@ -201,13 +201,13 @@ export default function Skills() {
     return (
         <section className="flex flex-col p-8 w-full items-center" id="skills">
             <h2 className="text-3xl font-bold mb-8">Skills</h2>
-            <div className="flex flex-row gap-6 p-8 items-center">
+            <div className="flex flex-row gap-6 items-center">
                 {skills.map((skill, index) => (
                     <div key={index} className="flex flex-col p-25 rounded-lg shadow-md">
                         <h3 className="text-xl font-semibold mb-2">{skill.category}</h3>
                         <div className="flex flex-wrap gap-2">
                             {skill.items.map((item) => (
-                                <span key={item.name} className="text-gray-800 px-2 py-1 rounded-full text-sm">
+                                <span key={item.name} className="text-gray-800 px-2 py-1 rounded-full text-sm hover: background-blur">
                                     
                                     <Image 
                                     src={item.icon}
