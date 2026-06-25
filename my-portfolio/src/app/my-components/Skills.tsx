@@ -1,6 +1,10 @@
+'use client'
+import { useState } from "react";
 import Image from "next/image";
 
 export default function Skills() {
+
+    const [hovered, sethovered] = useState(0);
     const skills = [
         {
             category: "Programming Languages",
@@ -140,11 +144,6 @@ export default function Skills() {
                 proficiency: "Intermediate"
             },
             {
-                name: "HuggingFace",
-                icon: "icons/express-svgrepo-com.svg",
-                proficiency: "Intermediate"
-            },
-            {
                 name: "scikit-learn.svg",
                 icon: "icons/scikit-learn.svg",
                 proficiency: "Intermediate"
@@ -203,11 +202,11 @@ export default function Skills() {
             <h2 className="text-3xl font-bold mb-8">Skills</h2>
             <div className="flex flex-row gap-6 items-center">
                 {skills.map((skill, index) => (
-                    <div key={index} className="flex flex-col p-25 rounded-lg shadow-md">
+                    <div key={index} className="flex flex-col p-25 rounded-lg shadow-md ">
                         <h3 className="text-xl font-semibold mb-2">{skill.category}</h3>
                         <div className="flex flex-wrap gap-2">
                             {skill.items.map((item) => (
-                                <span key={item.name} className="text-gray-800 px-2 py-1 rounded-full text-sm hover: background-blur">
+                                <span key={item.name} className="text-gray-800 px-2 py-1 rounded-full text-sm hover:bg-blur">
                                     
                                     <Image 
                                     src={item.icon}
