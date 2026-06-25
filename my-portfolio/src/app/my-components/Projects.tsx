@@ -8,6 +8,28 @@ export default function Projects() {
         {
             title: "Distributed Chat Application",
             technologies: ["NodeJs", "Socket.io", "React", "MongoDB", "Docker", "Kafka", "Express"],
+            technologie: [{
+                name: "NodeJs",
+                icon: "icons/node-js-svgrepo-com.svg"
+            },
+            {
+                name: "Socket.io",
+                icon: ""
+
+            },
+            {
+                name: "React",
+                icon: "icons/react-javascript-js-framework-facebook-svgrepo-com.svg"
+            },
+            {
+                name: "MongoDB",
+                icon: "icons/mongodb-logo-svgrepo-com.svg"
+            },
+            {
+                name: "Docker",
+                icon: "icons/"
+            }
+        ],
             description: "A real-time chat application that supports multiple users and rooms, built with Node.js, Socket.io, React, MongoDB, Docker, Kafka, and Express. The application allows users to create accounts, join chat rooms, and send messages in real-time. It also features user authentication and message persistence.",
             diagrams: []
         },
