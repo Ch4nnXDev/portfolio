@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export default function Skills() {
 
-    const [hovered, sethovered] = useState(0);
+    const [hovered, sethovered] = useState(false);
+    const [technology, setTechnology] = useState<string>("Programming Languages");
+
+    
     const skills = [
         {
             category: "Programming Languages",
@@ -126,7 +129,7 @@ export default function Skills() {
         ]
         },
         {
-            category: "AI & Machine Learning",
+            category: "Ai & Machine Learning",
             items: [
                 {
                 name: "TensorFlow",
@@ -200,29 +203,34 @@ export default function Skills() {
     return (
         <section className="flex flex-col p-8 w-full items-center" id="skills">
             <h2 className="text-3xl font-bold mb-8">Skills</h2>
-            <div className="flex flex-row gap-6 items-center">
+            <div className="flex flex-row gap-6 p-4">
+                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Programming Languages")}>Programming Languages</button>
+                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Frameworks & Libraries")}>Frameworks & Libraries</button>
+                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Databases")}>Databases</button>
+                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Tools & Platforms")}>Tools & Platforms</button>
+                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Ai & Machine Learning")}>Ai & Machine Learning</button>
+                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Cloud & Infrastructure")}>Cloud & Infrastructure</button>
+            </div>
+            <div>
                 {skills.map((skill, index) => (
-                    <div key={index} className="flex flex-col p-25 rounded-lg shadow-md ">
-                        <h3 className="text-xl font-semibold mb-2">{skill.category}</h3>
-                        <div className="flex flex-wrap gap-2">
-                            {skill.items.map((item) => (
-                                <span key={item.name} className="text-gray-800 px-2 py-1 rounded-full text-sm hover:bg-blur">
-                                    
-                                    <Image 
-                                    src={item.icon}
-                                    alt=""
-                                    width={50}
-                                    height={50}
-
+                    <div key={index}>
+                        {skill.category === technology ? <span className="flex flex-row gap-15 p-4 mt-30 mb-40">
+                            {skill.items.map((tech) => (
+                                <Image 
+                                className="hover:blur-sm transition duration-600 rounded-sm"
+                                key={tech.name}
+                                src={tech.icon}
+                                alt=""
+                                height={80}
+                                width={80}
                                 />
-                                </span>
-                                
-                               
                             ))}
-                        </div>
+                        </span> : <span></span>}
                     </div>
                 ))}
             </div>
+ 
+            
         </section>
     );
 }
