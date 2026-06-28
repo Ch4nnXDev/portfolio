@@ -45,7 +45,7 @@ const stats = [
 
 export default function Me() {
   return (
-    <section className="w-full p-20 mx-auto font-sans">
+    <section className="w-full p-20 mx-auto font-sans mt-40 z-2">
       {/* Header */}
       <p className="text-xs tracking-widest text-gray-400 uppercase font-mono mb-1">
         Get to know me
@@ -63,7 +63,7 @@ export default function Me() {
       {/* Timeline */}
       <div className="relative">
         {/* Spine */}
-        <div className="absolute left-[10px] top-0 bottom-0 w-px bg-gray-200" />
+        <div className="absolute left-[10px] top-0 bottom-0 w-px" />
 
         <div className="flex flex-col">
           {phases.map((phase, i) => (

@@ -6,7 +6,7 @@ export default function Hero() {
             
             <div className="flex flex-col w-full items-center gap-5">
                 
-                <h1 className="text-9xl ">Channa Karawita</h1>
+                <h1 className="text-8xl ">Channa Karawita</h1>
                 <p className="text-xl">Software Engineer | Growth Engineer | Full Stack Developer | Ai & ML Engineer</p>
             </div>
             <div className="flex flex-row p-6">

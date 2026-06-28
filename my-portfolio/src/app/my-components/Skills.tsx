@@ -201,7 +201,7 @@ export default function Skills() {
      
     ]
     return (
-        <section className="flex flex-col p-8 w-full items-center" id="skills">
+        <section className="flex flex-col p-8 w-full items-center mt-40 p-20" id="skills">
             <h2 className="text-3xl font-bold mb-8">Skills</h2>
             <div className="flex flex-row gap-6 p-4">
                 <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Programming Languages")}>Programming Languages</button>
