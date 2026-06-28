@@ -45,12 +45,12 @@ const stats = [
 
 export default function Me() {
   return (
-    <section className="w-full p-20 mx-auto font-sans mt-40 z-2">
+    <section className="w-full p-20 mx-auto font-sans mt-60 z-2">
       {/* Header */}
       <p className="text-xs tracking-widest text-gray-400 uppercase font-mono mb-1">
         Get to know me
       </p>
-      <h1 className="text-8xl font-semibold text-gray-900 leading-tight tracking-tight mb-1">
+      <h1 className="text-6xl font-semibold text-gray-900 leading-tight tracking-tight mb-1">
         Engineer.{" "}
         <span className="text-blue-600">Builder.</span>
         <br />
