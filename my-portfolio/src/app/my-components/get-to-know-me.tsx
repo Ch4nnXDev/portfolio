@@ -1,6 +1,7 @@
 'use client'
-
+import gsap from "gsap";
 import { useEffect, useRef } from "react";
+
 
 const phases = [
   {
@@ -43,20 +44,38 @@ const stats = [
   { num: "∞", label: "Domains explored" },
 ];
 
+
 export default function Me() {
+
+    const title = useRef(null);
+    const box = useRef(null);
+
+    useEffect(() => {
+        const tl = gsap.timeline();
+        tl.from(title.current,{
+            y:100,
+            opacity:0,
+            duration:3,
+            ease:"power3.out"
+        })
+
+       
+
+
+    }, []);
   return (
-    <section className="w-full p-20 mx-auto font-sans mt-60 z-2">
+    <section className="w-full p-20 font-sans mt-60 z-2">
       {/* Header */}
-      <p className="text-xs tracking-widest text-gray-400 uppercase font-mono mb-1">
+      <p className="text-xs text-gray-400 uppercase font-mono mb-1">
         Get to know me
       </p>
-      <h1 className="text-6xl font-semibold text-gray-900 leading-tight tracking-tight mb-1">
+      <h1 className="text-6xl font-semibold text-gray-900 leading-tight tracking-tight mb-1" ref={title}>
         Engineer.{" "}
         <span className="text-blue-600">Builder.</span>
         <br />
         Perpetual learner.
       </h1>
-      <p className="text-sm text-gray-500 mb-10">
+      <p className="text-sm text-gray-500 mb-10" ref={box}>
         Current standing — final year, IIT Sri Lanka
       </p>
 
@@ -65,7 +84,7 @@ export default function Me() {
         {/* Spine */}
         <div className="absolute left-[10px] top-0 bottom-0 w-px" />
 
-        <div className="flex flex-col">
+        <div className="flex flex-col" >
           {phases.map((phase, i) => (
             <div key={i} className="relative flex gap-6 pb-8 last:pb-0">
               {/* Dot */}
@@ -87,6 +106,7 @@ export default function Me() {
 
               {/* Card */}
               <div
+              
                 className={`flex-1 rounded-xl border p-4 transition-colors ${
                   phase.active
                     ? "border-blue-300 bg-blue-50"
