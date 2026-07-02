@@ -13,7 +13,7 @@ export default function Experience() {
             company: "Sri Lanka Telecom",
             location: "SLT Head Office",
             duration: "2025 June 16 - 2026 May 16",
-            description: "Worked on developing and maintaining web applications, collaborating with cross-functional teams to deliver high-quality software solutions.",
+            description: "Worked on developing and maintaining web applications, collaborating with cross-functional teams to deliver high-quality software solutions. ",
             skills: {
                 "NodeJs": "/icons/node-js-svgrepo-com.svg",
                 "React": "/icons/react-javascript-js-framework-facebook-svgrepo-com.svg",
@@ -55,19 +55,20 @@ export default function Experience() {
     return (
         <section className=" w-full">
             <h2 className="p-20 text-3xl">Experience</h2>
-            <Swiper modules={[Pagination]} pagination={{ clickable: true }} slidesPerView={1} className="w-full">
+            <Swiper modules={[Pagination]} pagination={{ clickable: true }} slidesPerView={1} className="w-full ">
             {experience.map((exp) => (
                 <SwiperSlide key={exp.position}>
-                    <div className="grid grid-cols-4 shadow-md items-center p-20 gap-2 rounded-xl shadow-lg rounded-lg" >
+                    <div className="grid grid-cols-4 shadow-md items-center p-2 m-20 gap-2 rounded-xl rounded-lg bg-black" >
                 
-                        <div ref={boxRef} className="p-20 border rounded-lg col-span-3 shadow-lg">{exp.position}</div>
-                        <div className="p-17 border rounded-lg col-span-1 shadow-lg">{exp.duration}</div>
-                        <div className="h-30 p-10 border rounded-lg col-span-2 shadow-lg">{exp.location}</div>
+                        <div ref={boxRef} className="h-30 p-10 rounded-lg col-span-3 shadow-lg bg-white text-center text-lg">{exp.position}</div>
+                        <div className="h-30 p-10 rounded-lg col-span-1 shadow-lg bg-white text-center text-lg">{exp.duration}</div>
+                        <div className="h-30 p-10 rounded-lg col-span-2 bg-white shadow-lg text-center text-lg">{exp.location}</div>
                        
-                        <div className="h-30 p-10 border rounded-lg col-span-2 shadow-lg">{exp.company}</div>
+                        <div className="h-30 p-10  bg-white rounded-lg col-span-2 shadow-lg text-center text-lg">{exp.company}</div>
 
-                        <div className="h-100 border rounded-lg col-span-2 shadow-lg text-center">{exp.description}</div>
-                        <div className="h-100 border rounded-lg col-span-2 shadow-lg text-center">SKILLS</div>
+                        <div className="h-100 p-10 bg-white rounded-lg col-span-2 shadow-lg text-center text-lg">{exp.description}</div>
+                        
+                        <div className="h-100 p-10 rounded-lg bg-white col-span-2 shadow-lg text-center text-lg">klknkl</div>
                          
                 
                 
