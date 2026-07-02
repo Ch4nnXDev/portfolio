@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Projects() {
 
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState("");
 
   const box = useRef(null);
 
@@ -87,8 +87,8 @@ export default function Projects() {
  
       <div className="relative w-full min-h-[400vh] flex flex-col items-center">
         {projects.map((proj, i) => (
-          <div key={proj.title} className="sticky top-40 flex justify-center w-full p-30" style={{ zIndex: projects.length - i }} ref={box}>
-            <div className="w-[650px] h-[450px] bg-red-300 border border-blue-600 rounded-xl shadow-lg p-10 flex flex-col justify-between">
+          <div key={proj.title} className="sticky top-40 flex justify-center w-full p-30" style={{ zIndex: projects.length - i }} >
+            <div className={`w-[650px] h-[450px] ${selectedProject === proj.title ? "z-100 inset-0 fixed w-100vh h-100vh bg-blue-500" : "bg-red-300"} border border-blue-600 rounded-xl shadow-lg p-10 flex flex-col justify-between `} onClick={() => setSelectedProject(proj.title)} ref={box}>
               
               <div>
                 <h1 className="text-xl font-bold">{proj.title}</h1>
