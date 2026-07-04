@@ -58,7 +58,7 @@ export default function Experience() {
             <Swiper modules={[Pagination]} pagination={{ clickable: true }} slidesPerView={1} className="w-full ">
             {experience.map((exp) => (
                 <SwiperSlide key={exp.position}>
-                    <div className="grid grid-cols-4 shadow-md items-center p-2 m-20 gap-2 rounded-xl rounded-lg bg-black" >
+                    <div className="grid grid-cols-4 shadow-md items-center p-2 m-20 gap-2 rounded-xl rounded-lg" >
                 
                         <div ref={boxRef} className="h-30 p-10 rounded-lg col-span-3 shadow-lg bg-white text-center text-lg">{exp.position}</div>
                         <div className="h-30 p-10 rounded-lg col-span-1 shadow-lg bg-white text-center text-lg">{exp.duration}</div>
