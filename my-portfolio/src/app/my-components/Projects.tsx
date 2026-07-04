@@ -92,7 +92,7 @@ export default function Projects() {
         { name: "LangChain", icon: "/icons/Langchain.svg" },
         { name: "React", icon: "/icons/react-javascript-js-framework-facebook-svgrepo-com.svg" },
       ],
-      featured_img: "",
+      featured_img: "/project-images/rag-app.jpg",
       description:
         "Retrieval-Augmented Generation system using LangChain and Flan-T5.",
     },
@@ -108,6 +108,7 @@ export default function Projects() {
         { name: "Kafka", icon: "/icons/Apache Kafka.svg" },
         { name: "Express", icon: "/icons/express-svgrepo-com.svg" },
       ],
+      featured_img: "/project-images/p2p-network.png",
       description:
         "Built a distributed peer-to-peer networking system.",
     },
