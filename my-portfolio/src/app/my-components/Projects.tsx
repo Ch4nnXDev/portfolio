@@ -5,24 +5,54 @@ import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import { useState } from "react";
 import Image from "next/image";
+type proj = {
+  title: string;
+  technologies: { name: string; icon: string }[];
+  description: string;
+};
 
 export default function Projects() {
 
-  const [selectedProject, setSelectedProject] = useState("");
+  const [selectedProject, setSelectedProject] = useState<proj | null>(null);
 
   const box = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(box.current, {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: box.current,
-        start: "top 80%",
-      },
 
-    })
+    gsap.utils.toArray<HTMLElement>(".project-card").forEach((card) => {
 
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",     
+          end: "top 10%",       
+          scrub: 1.2,
+        },
+      })
+
+      .fromTo(card,
+        {
+          opacity: 0,
+          y: 150,
+          scale: 0.95,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          ease: "none",
+        }
+      )
+
+      
+      .to(card, {
+        opacity: 0,
+        y: -150,   
+        scale: 0.95,
+        ease: "none",
+      });
+    });
   }, []);
 
   const projects = [
@@ -83,34 +113,65 @@ export default function Projects() {
   return (
     <section id="projects" className="flex flex-col items-center w-full px-6 mt-40">
       <h2 className="text-4xl font-bold mb-10">Projects</h2>
+      
 
  
       <div className="relative w-full min-h-[400vh] flex flex-col items-center">
         {projects.map((proj, i) => (
+          
           <div key={proj.title} className="sticky top-40 flex justify-center w-full p-30" style={{ zIndex: projects.length - i }} >
-            <div className={`w-[650px] h-[450px] ${selectedProject === proj.title ? "z-100 inset-0 fixed w-100vh h-100vh bg-blue-500" : "bg-red-300"} border border-blue-600 rounded-xl shadow-lg p-10 flex flex-col justify-between `} onClick={() => setSelectedProject(proj.title)} ref={box}>
+
+            <div className="project-card w-[1000px] h-[600px] border border-blue-600 rounded-xl shadow-lg p-10 flex flex-col justify-between" onClick={() => setSelectedProject(proj)} ref={box}>
               
               <div>
                 <h1 className="text-xl font-bold">{proj.title}</h1>
                 <p className="text-sm mt-4">{proj.description}</p>
               </div>
 
-              <div className="flex gap-4 flex-wrap mt-6">
+              <div className="flex gap-20 flex-wrap mt-6">
                 {proj.technologies.map((tech) => (
                   <Image
                     key={tech.name}
                     src={tech.icon}
                     alt={tech.name}
-                    width={80}
-                    height={80}
+                    width={70}
+                    height={70}
                   />
                 ))}
+                
               </div>
+              
 
             </div>
           </div>
         ))}
+        {selectedProject && (
+                <div className="fixed inset-0 z-50 bg-black/70 flex items-center w-[100vw] h-[100vh] justify-center">
+                  
+                  <div className="bg-white w-full h-full rounded-xl p-10 relative">
+                    
+                    {/* close button */}
+                    <button
+                      className="absolute top-4 right-4 text-black text-xl"
+                      onClick={() => setSelectedProject(null)}
+                    >
+                      ✕
+                    </button>
+
+                    {/* content */}
+                    <h1 className="text-3xl font-bold">
+                      {selectedProject.title}
+                    </h1>
+
+                    <p className="mt-4 text-gray-600">
+                      {selectedProject.description}
+                    </p>
+
+                  </div>
+                </div>
+              )}
       </div>
+      
     </section>
   );
 }
