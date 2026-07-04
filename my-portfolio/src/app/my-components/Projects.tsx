@@ -65,6 +65,7 @@ export default function Projects() {
         { name: "MongoDB", icon: "/icons/mongodb-logo-svgrepo-com.svg" },
         { name: "Docker", icon: "/icons/Docker.svg" },
       ],
+      featured_img: "/project-images/chatapp.png",
       description:
         "A real-time chat application with rooms, authentication, and persistent storage.",
     },
@@ -79,6 +80,7 @@ export default function Projects() {
         { name: "Render", icon: "/icons/Render Symbol SVG.svg" },
         { name: "Vercel", icon: "/icons/vercel-svgrepo-com.svg" },
       ],
+      featured_img: "/project-images/sexual-health-center.png",
       description:
         "CMS system for managing clinic website content easily.",
     },
@@ -90,6 +92,7 @@ export default function Projects() {
         { name: "LangChain", icon: "/icons/Langchain.svg" },
         { name: "React", icon: "/icons/react-javascript-js-framework-facebook-svgrepo-com.svg" },
       ],
+      featured_img: "",
       description:
         "Retrieval-Augmented Generation system using LangChain and Flan-T5.",
     },
