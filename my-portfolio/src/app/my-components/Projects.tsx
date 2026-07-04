@@ -2,9 +2,9 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
 import { useState } from "react";
 import Image from "next/image";
+import { Swiper } from "swiper/react";
 type proj = {
   title: string;
   technologies: { name: string; icon: string }[];
@@ -15,7 +15,7 @@ export default function Projects() {
 
   const [selectedProject, setSelectedProject] = useState<proj | null>(null);
 
-  const box = useRef(null);
+ 
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -119,9 +119,9 @@ export default function Projects() {
       <div className="relative w-full min-h-[400vh] flex flex-col items-center">
         {projects.map((proj, i) => (
           
-          <div key={proj.title} className="sticky top-40 flex justify-center w-full p-30" style={{ zIndex: projects.length - i }} >
+          <div key={proj.title} className=" top-40 flex justify-center w-full p-30" style={{ zIndex: projects.length - i }} >
 
-            <div className="project-card w-[1000px] h-[600px] border border-blue-600 rounded-xl shadow-lg p-10 flex flex-col justify-between" onClick={() => setSelectedProject(proj)} ref={box}>
+            <div className="project-card w-[1000px] h-[600px] border border-blue-600 rounded-xl shadow-lg p-10 flex flex-col justify-between" onClick={() => setSelectedProject(proj)} >
               
               <div>
                 <h1 className="text-xl font-bold">{proj.title}</h1>
@@ -150,22 +150,24 @@ export default function Projects() {
                   
                   <div className="bg-white w-full h-full rounded-xl p-10 relative">
                     
-                    {/* close button */}
-                    <button
-                      className="absolute top-4 right-4 text-black text-xl"
-                      onClick={() => setSelectedProject(null)}
-                    >
-                      ✕
-                    </button>
+                   
+                    
 
                     {/* content */}
                     <h1 className="text-3xl font-bold">
                       {selectedProject.title}
                     </h1>
+                    <Swiper></Swiper>
 
                     <p className="mt-4 text-gray-600">
                       {selectedProject.description}
                     </p>
+                    <button
+                      className="absolute bottom-10 right-10 text-white text-xl p-5 bg-black rounded-lg shadow-md"
+                      onClick={() => setSelectedProject(null)}
+                    >
+                      ✕
+                    </button>
 
                   </div>
                 </div>
