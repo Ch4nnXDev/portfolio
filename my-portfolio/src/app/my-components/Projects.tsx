@@ -83,7 +83,12 @@ export default function Projects() {
       featured_img: "/project-images/sexual-health-center.png",
       description:
         "CMS system for managing clinic website content easily.",
-    },
+      diagrams: {
+        "System Architecture": "/project-diagrams/sexual-health-center-system-architecture.png",
+      },
+      project_scope: "The project involved developing a comprehensive Content Management System (CMS) for the Anuradhapura HIV Centre. The primary goal was to create a user-friendly platform that allows the clinic staff to manage and update website content efficiently. The CMS was designed to handle various types of content, including text, images, and documents, ensuring that the website remains current and informative for visitors."
+      },
+      
 
     {
       title: "RAG Application with Flan-T5",
