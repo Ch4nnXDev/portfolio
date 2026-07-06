@@ -1,6 +1,6 @@
 "use client";
 import {useEffect, useRef} from 'react';
-import gsap from "gsap";
+
 import { Swiper, SwiperSlide} from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -13,7 +13,7 @@ export default function Experience() {
             company: "Sri Lanka Telecom",
             location: "SLT Head Office",
             duration: "2025 June 16 - 2026 May 16",
-            description: "Worked on developing and maintaining web applications, collaborating with cross-functional teams to deliver high-quality software solutions. ",
+            description: "I was assigned to IT Solutions Developement Section of Sri Lanka Telecom HQ, During my Internship I was exposed to how big companies Manage their work and how different teacm and sections work together to achieve a common goal, at the intial stage of my internship i was assigned a project which is a Fraud Call Management System, built using python as the backend and Bootstrap was used for the frontend i collabated by building CRUD Opeartions and UI Models, After the inital stage i was offered the opprtunity to icdependently built a User Interface for the RIBE System, it was a which is a Telecom Operations Management System, I built it using AngularJS by Making Reusable Components. I was Also Assigned to Make RBAC (Role Based Access Control) for a Custom CRM System, which used PHP Framework CodeIgniter.",
             skills: {
                 "NodeJs": "/icons/node-js-svgrepo-com.svg",
                 "React": "/icons/react-javascript-js-framework-facebook-svgrepo-com.svg",
@@ -66,7 +66,7 @@ export default function Experience() {
                        
                         <div className="h-30 p-10  bg-white rounded-lg col-span-2 shadow-lg text-center text-lg">{exp.company}</div>
 
-                        <div className="h-100 p-10 bg-white rounded-lg col-span-2 shadow-lg text-center text-lg">{exp.description}</div>
+                        <div className="h-100 p-10 bg-white rounded-lg col-span-2 shadow-lg text-center text-md">{exp.description}</div>
                         
                         <div className="h-100 p-10 rounded-lg bg-white col-span-2 shadow-lg text-center text-lg">klknkl</div>
                          

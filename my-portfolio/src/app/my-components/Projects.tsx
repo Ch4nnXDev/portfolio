@@ -121,7 +121,7 @@ export default function Projects() {
         { name: "Kafka", icon: "/icons/Apache Kafka.svg" },
         { name: "Express", icon: "/icons/express-svgrepo-com.svg" },
       ],
-      featured_img: "/project-images/p2p-network.png",
+      featured_img: "/project-images/p2p-network.jpg",
       description:
         "Built a distributed peer-to-peer networking system.",
       diagrams: {
@@ -144,21 +144,22 @@ export default function Projects() {
 
             <div className="project-card w-[1000px] h-[600px] border border-blue-600 rounded-xl shadow-lg flex flex-row justify-between" onClick={() => setSelectedProject(proj)} >
               
-              <div className="flex flex-row width-[50%] h-full p-5">
+              <div className="flex flex-row width-[50%] h-full p-3">
                 
                   <Image width={800} height={300} src={proj.featured_img} alt={proj.title} className="rounded-lg h-full w-full" />
               </div>
                 
               <div className="flex flex-col justify-between">
-                <p className="text-sm mt-4">{proj.description}</p>
+                <h1 className="text-2xl font-bold mt-10">{proj.title}</h1>
+                <p className="text-lg mt-4">{proj.description}</p>
                 <div className="flex gap-2 flex-wrap mb-10 ">
                   {proj.technologies.map((tech) => (
                     <Image
                       key={tech.name}
                       src={tech.icon}
                       alt={tech.name}
-                      width={50}
-                      height={50}
+                      width={60}
+                      height={60}
                       
                     />
                   ))}
