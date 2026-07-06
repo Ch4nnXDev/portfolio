@@ -60,7 +60,7 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Distributed Chat Application",
+      title: "Distributed Chat Platform",
       technologies: [
         { name: "NodeJs", icon: "/icons/node-js-svgrepo-com.svg" },
         { name: "Socket.io", icon: "/icons/Socket.io.svg" },
@@ -70,14 +70,14 @@ export default function Projects() {
       ],
       featured_img: "/project-images/chatapp.png",
       description:
-        "A real-time chat application with rooms, authentication, and persistent storage.",
+        "A Production level real-time chat system with microservices architecture and Kafka to communicate between services.",
       diagrams: {"System Architecture": "/project-diagrams/chatapp-system-architecture.png" },
       project_scope: "The project involved developing a distributed chat application that allows users to communicate in real-time. The application supports multiple chat rooms, user authentication, and persistent storage of messages. The primary goal was to create a seamless and interactive chat experience for users, enabling them to connect and engage in conversations effortlessly."
 
     },
 
     {
-      title: "Anuradhapura HIV Centre CMS",
+      title: "Sexual Health Center Website and CMS",
       technologies: [
         { name: "NextJs", icon: "/icons/nextjs-svgrepo-com.svg" },
         { name: "NodeJs", icon: "/icons/node-js-svgrepo-com.svg" },
@@ -86,7 +86,7 @@ export default function Projects() {
         { name: "Render", icon: "/icons/Render Symbol SVG.svg" },
         { name: "Vercel", icon: "/icons/vercel-svgrepo-com.svg" },
       ],
-      featured_img: "/project-images/sexual-health-center.png",
+      featured_img: "/project-images/health.png",
       description:
         "CMS system for managing clinic website content easily.",
       diagrams: {
@@ -121,7 +121,7 @@ export default function Projects() {
         { name: "Kafka", icon: "/icons/Apache Kafka.svg" },
         { name: "Express", icon: "/icons/express-svgrepo-com.svg" },
       ],
-      featured_img: "/project-images/p2p-network.jpg",
+      featured_img: "/project-images/p2p.png",
       description:
         "Built a distributed peer-to-peer networking system.",
       diagrams: {
@@ -142,24 +142,27 @@ export default function Projects() {
           
           <div key={proj.title} className="top-40 flex justify-center w-full p-30" style={{ zIndex: projects.length - i }} >
 
-            <div className="project-card w-[1000px] h-[600px] border border-blue-600 rounded-xl shadow-lg flex flex-row justify-between" onClick={() => setSelectedProject(proj)} >
+            <div className="project-card w-[1000px] h-[500px] border border-blue-600 rounded-xl shadow-lg flex flex-row justify-between" onClick={() => setSelectedProject(proj)} >
               
-              <div className="flex flex-row width-[50%] h-full p-3">
+              <div className="flex flex-row w-[750px] h-[500px] p-3">
                 
-                  <Image width={800} height={300} src={proj.featured_img} alt={proj.title} className="rounded-lg h-full w-full" />
+                  <Image width={750} height={300} src={proj.featured_img} alt={proj.title} className="rounded-lg h-full w-full" />
               </div>
                 
-              <div className="flex flex-col justify-between">
-                <h1 className="text-2xl font-bold mt-10">{proj.title}</h1>
-                <p className="text-lg mt-4">{proj.description}</p>
-                <div className="flex gap-2 flex-wrap mb-10 ">
+              <div className="flex flex-col gap-10 font-sans justify-center items-center">
+                <h1 className="text-2xl font-bold text-wrap ">{proj.title}</h1>
+                <p className="text-sm mt-4 text-wrap text-center">{proj.description}</p>
+                <button className="p-3 shadow-lg rounded-lg">
+                  <Image src="/icons/github-142-svgrepo-com.svg" alt="" width={30} height={30} />
+                </button>
+                <div className="flex gap-6 p-5 flex-wrap items-center justify-center">
                   {proj.technologies.map((tech) => (
                     <Image
                       key={tech.name}
                       src={tech.icon}
                       alt={tech.name}
-                      width={60}
-                      height={60}
+                      width={30}
+                      height={30}
                       
                     />
                   ))}
