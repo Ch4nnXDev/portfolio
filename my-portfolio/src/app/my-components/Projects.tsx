@@ -142,7 +142,7 @@ export default function Projects() {
           
           <div key={proj.title} className="top-40 flex justify-center w-full p-30" style={{ zIndex: projects.length - i }} >
 
-            <div className="project-card w-[1000px] h-[500px] border border-blue-600 rounded-xl shadow-lg flex flex-row justify-between" onClick={() => setSelectedProject(proj)} >
+            <div className="project-card w-[1000px] h-[500px] border border-blue-600 rounded-xl shadow-lg flex flex-row justify-between bg-white hover:cursor-pointer sm:w-[600px]" onClick={() => setSelectedProject(proj)} >
               
               <div className="flex flex-row w-[750px] h-[500px] p-3">
                 
@@ -151,7 +151,7 @@ export default function Projects() {
                 
               <div className="flex flex-col gap-10 font-sans justify-center items-center">
                 <h1 className="text-2xl font-bold text-wrap ">{proj.title}</h1>
-                <p className="text-sm mt-4 text-wrap text-center">{proj.description}</p>
+                <p className="text-sm mt-4 text-wrap text-center ">{proj.description}</p>
                 <button className="p-3 shadow-lg rounded-lg">
                   <Image src="/icons/github-142-svgrepo-com.svg" alt="" width={30} height={30} />
                 </button>

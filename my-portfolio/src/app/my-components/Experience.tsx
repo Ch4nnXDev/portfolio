@@ -55,7 +55,7 @@ export default function Experience() {
     }, []);
     return (
         <section className=" w-full">
-            <h2 className="p-20 text-3xl">Experience</h2>
+            <h2 className="p-20 text-3xl font-bold">Experience</h2>
             <Swiper modules={[Pagination]} pagination={{ clickable: true }} slidesPerView={1} className="w-full ">
             {experience.map((exp) => (
                 <SwiperSlide key={exp.position}>
@@ -63,7 +63,7 @@ export default function Experience() {
                 
                         <div ref={boxRef} className="h-30 p-10 rounded-lg col-span-3 shadow-lg bg-white text-center text-lg">{exp.position}</div>
                         <div className="h-30 p-10 rounded-lg col-span-1 shadow-lg bg-white text-center text-lg">{exp.duration}</div>
-                        <div className="h-30 p-10 rounded-lg col-span-2 bg-white shadow-lg text-center text-lg">{exp.location}</div>
+                        <div className="h-30 p-10 rounded-lg col-span-2 bg-white shadow-lg text-center text-lg sm:text-sm">{exp.location}</div>
                        
                         <div className="h-30 p-10  bg-white rounded-lg col-span-2 shadow-lg text-center text-lg">{exp.company}</div>
 
