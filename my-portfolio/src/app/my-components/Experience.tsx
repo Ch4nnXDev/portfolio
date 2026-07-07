@@ -32,7 +32,7 @@ export default function Experience() {
             duration: "2026 Feb 1 - 2026 Present",
             description: "Responsible for designing and developing the company's website, implementing digital marketing strategies, and optimizing online presence to drive business growth.",
             skills: [
-                {Name: "WordPress", Icon: "/icons/wordpress-svgrepo-com.svg"},
+                {Name: "WordPress", Icon: "/icons/wordpress-2.svg"},
                 {Name: "WooCommerce", Icon: "/icons/woocommerce-svgrepo-com.svg"},
                 {Name: "Elementor", Icon: "/icons/elementor-svgrepo-com.svg"},
                 {Name: "Google Ads", Icon: "/icons/google-ads-svgrepo-com.svg"},

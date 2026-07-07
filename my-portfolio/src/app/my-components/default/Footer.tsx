@@ -8,6 +8,8 @@ export default function Footer() {
             <div className="text-black font-medium">Created in 2026</div>
         </div>
     </footer>
+
+    
     );
     
 }
