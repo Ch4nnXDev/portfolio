@@ -14,15 +14,16 @@ export default function Experience() {
             location: "SLT Head Office",
             duration: "2025 June 16 - 2026 May 16",
             description: "I was assigned to IT Solutions Developement Section of Sri Lanka Telecom HQ, During my Internship I was exposed to how big companies Manage their work and how different teacm and sections work together to achieve a common goal, at the intial stage of my internship i was assigned a project which is a Fraud Call Management System, built using python as the backend and Bootstrap was used for the frontend i collabated by building CRUD Opeartions and UI Models, After the inital stage i was offered the opprtunity to icdependently built a User Interface for the RIBE System, it was a which is a Telecom Operations Management System, I built it using AngularJS by Making Reusable Components. I was Also Assigned to Make RBAC (Role Based Access Control) for a Custom CRM System, which used PHP Framework CodeIgniter.",
-            skills: {
-                "NodeJs": "/icons/node-js-svgrepo-com.svg",
-                "React": "/icons/react-javascript-js-framework-facebook-svgrepo-com.svg",
-                "NextJs": "/icons/nextjs-svgrepo-com.svg",
-                "Postgres": "/icons/postgresql-logo-svgrepo-com.svg",
-                "Express": "/icons/express-svgrepo-com.svg",
-                "Render": "/icons/Render Symbol SVG.svg",
-                "Vercel": "/icons/vercel-svgrepo-com.svg"
-            }
+            skills: [
+                {Name: "NodeJs", Icon: "/icons/node-js-svgrepo-com.svg"},
+                {Name: "React", Icon: "/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"},
+                {Name: "NextJs", Icon: "/icons/nextjs-svgrepo-com.svg"},
+                {Name: "Postgres", Icon: "/icons/postgresql-logo-svgrepo-com.svg"},
+                {Name: "Express", Icon: "/icons/express-svgrepo-com.svg"},
+                {Name: "Render", Icon: "/icons/Render Symbol SVG.svg"},
+                {Name: "Vercel", Icon: "/icons/vercel-svgrepo-com.svg"}
+            
+            ]
         },
         {
             position: "Web Developer And Digital Marketing Executive",
@@ -30,16 +31,16 @@ export default function Experience() {
             location: "Nugegoda, Sri Lanka",
             duration: "2026 Feb 1 - 2026 Present",
             description: "Responsible for designing and developing the company's website, implementing digital marketing strategies, and optimizing online presence to drive business growth.",
-            skills: {
-                "WordPress": "/icons/wordpress-svgrepo-com.svg",
-                "WooCommerce": "/icons/woocommerce-svgrepo-com.svg",
-                "Elementor": "/icons/elementor-svgrepo-com.svg",
-                "Google Ads": "/icons/google-ads-svgrepo-com.svg",
-                "Meta Ads": "/icons/meta-ads-svgrepo-com.svg",
-                "Semrush": "/icons/semrush-svgrepo-com.svg",
-                "Googe Analytics": "/icons/google-analytics-svgrepo-com.svg"
+            skills: [
+                {Name: "WordPress", Icon: "/icons/wordpress-svgrepo-com.svg"},
+                {Name: "WooCommerce", Icon: "/icons/woocommerce-svgrepo-com.svg"},
+                {Name: "Elementor", Icon: "/icons/elementor-svgrepo-com.svg"},
+                {Name: "Google Ads", Icon: "/icons/google-ads-svgrepo-com.svg"},
+                {Name: "Meta Ads", Icon: "/icons/meta-ads-svgrepo-com.svg"},
+                {Name: "Semrush", Icon: "/icons/semrush-svgrepo-com.svg"},
+                {Name: "Google Analytics", Icon: "/icons/google-analytics-svgrepo-com.svg"}
 
-            }
+            ]
         }
 
         
@@ -68,7 +69,14 @@ export default function Experience() {
 
                         <div className="h-100 p-10 bg-white rounded-lg col-span-2 shadow-lg text-center text-md">{exp.description}</div>
                         
-                        <div className="h-100 p-10 rounded-lg bg-white col-span-2 shadow-lg text-center text-lg">klknkl</div>
+                        <div className="h-100 p-10 rounded-lg bg-white col-span-2 shadow-lg text-center text-lg">
+                            {exp.skills.map((skill, index) => (
+                                <span key={index} className="inline-block m-2 p-2 bg-gray-200 rounded-lg">
+                                    
+                                    <p>{skill.Name}</p>
+                                </span>
+                            ))}
+                        </div>
                          
                 
                 
