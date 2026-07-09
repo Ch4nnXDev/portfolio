@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useState } from "react";
 import Image from "next/image";
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 type proj = {
   title: string;
   technologies: { name: string; icon: string }[];
@@ -12,6 +12,7 @@ type proj = {
   featured_img: string;
   diagrams: { [key: string]: string };
   project_scope: string;
+  project_pics: string[]
 };
 
 export default function Projects() {
@@ -42,7 +43,7 @@ export default function Projects() {
         },
         {
           opacity: 1,
-          y: 0,
+          y: 50,
           scale: 1,
           ease: "none",
         }
@@ -72,7 +73,10 @@ export default function Projects() {
       description:
         "A Production level real-time chat system with microservices architecture and Kafka to communicate between services.",
       diagrams: {"System Architecture": "/project-diagrams/chatapp-system-architecture.png" },
-      project_scope: "The project involved developing a distributed chat application that allows users to communicate in real-time. The application supports multiple chat rooms, user authentication, and persistent storage of messages. The primary goal was to create a seamless and interactive chat experience for users, enabling them to connect and engage in conversations effortlessly."
+      project_scope: "The project involved developing a distributed chat application that allows users to communicate in real-time. The application supports multiple chat rooms, user authentication, and persistent storage of messages. The primary goal was to create a seamless and interactive chat experience for users, enabling them to connect and engage in conversations effortlessly.",
+      github_link: "https://github.com/Ch4nnXDev/Distributed-Chat-Application",
+      hosted_link: "",
+      project_pics: ["/project-screenshots/health-1.png", "/project-screenshots/health-2.png", "/project-screenshots/health-3.png", "/project-screenshots/health-4.png"]
 
     },
 
@@ -92,8 +96,13 @@ export default function Projects() {
       diagrams: {
         "System Architecture": "/project-diagrams/sexual-health-center-system-architecture.png",
       },
-      project_scope: "The project involved developing a comprehensive Content Management System (CMS) for the Anuradhapura HIV Centre. The primary goal was to create a user-friendly platform that allows the clinic staff to manage and update website content efficiently. The CMS was designed to handle various types of content, including text, images, and documents, ensuring that the website remains current and informative for visitors."
+      project_scope: "The project involved developing a comprehensive Content Management System (CMS) for the Anuradhapura HIV Centre. The primary goal was to create a user-friendly platform that allows the clinic staff to manage and update website content efficiently. The CMS was designed to handle various types of content, including text, images, and documents, ensuring that the website remains current and informative for visitors.",
+      github_link: "https://github.com/Ch4nnXDev/gov-clinic-webiste",
+      hosted_link: "https://sexualhealthcentreanuradhapura.lk/",
+      project_pics: ["/project-screenshots/health-1", "/project-screenshots/health-2", "/project-screenshots/health-3", "/project-screenshots/health-4"]
       },
+      
+      
       
 
     {
@@ -107,7 +116,10 @@ export default function Projects() {
       description:
         "Retrieval-Augmented Generation system using LangChain and Flan-T5.",
       diagrams: {"System Architecture": "/project-diagrams/rag-app-system-architecture.png" },
-      project_scope: "The project involved developing a Retrieval-Augmented Generation (RAG) application that leverages the capabilities of LangChain and the Flan-T5 model. The primary objective was to create a system that can retrieve relevant information from a knowledge base and generate contextually accurate responses based on user queries. The application was designed to enhance information retrieval and provide users with precise and informative answers, making it a valuable tool for various applications, including customer support, research, and content generation."
+      project_scope: "The project involved developing a Retrieval-Augmented Generation (RAG) application that leverages the capabilities of LangChain and the Flan-T5 model. The primary objective was to create a system that can retrieve relevant information from a knowledge base and generate contextually accurate responses based on user queries. The application was designed to enhance information retrieval and provide users with precise and informative answers, making it a valuable tool for various applications, including customer support, research, and content generation.",
+      github_link: "https://github.com/Ch4nnXDev/graph-rag-app",
+      hosted_link: "",
+      project_pics: ["/project-screenshots/health-1", "/project-screenshots/health-2", "/project-screenshots/health-3", "/project-screenshots/health-4"]
     },
 
     {
@@ -127,7 +139,10 @@ export default function Projects() {
       diagrams: {
         "System Architecture": "/project-diagrams/p2p-network-system-architecture.png",
       },
-      project_scope: "The project involved developing a distributed peer-to-peer networking system using Node.js and Socket.io. The primary objective was to create a robust and scalable network infrastructure that enables efficient communication between peers. The system was designed to handle various types of data transmission and ensure reliable connectivity across different network environments."
+      project_scope: "The project involved developing a distributed peer-to-peer networking system using Node.js and Socket.io. The primary objective was to create a robust and scalable network infrastructure that enables efficient communication between peers. The system was designed to handle various types of data transmission and ensure reliable connectivity across different network environments.",
+      github_link: "https://github.com/Ch4nnXDev/Production-Peer2Peer-Network",
+      hosted_link: "",
+      project_pics: ["/project-screenshots/health-1", "/project-screenshots/health-2", "/project-screenshots/health-3", "/project-screenshots/health-4"]
     },
   ];
 
@@ -142,19 +157,25 @@ export default function Projects() {
           
           <div key={proj.title} className="top-40 flex justify-center w-full p-30" style={{ zIndex: projects.length - i }} >
 
-            <div className="project-card w-[1000px] h-[500px] border border-blue-600 rounded-xl shadow-lg flex flex-row justify-between bg-white hover:cursor-pointer sm:w-[600px]" onClick={() => setSelectedProject(proj)} >
+            <div className="project-card w-[1000px] h-[500px] border border-black-200 rounded-xl shadow-lg flex flex-row justify-between bg-white hover:cursor-pointer" onClick={() => setSelectedProject(proj)} >
               
               <div className="flex flex-row w-[750px] h-[500px] p-3">
                 
                   <Image width={750} height={300} src={proj.featured_img} alt={proj.title} className="rounded-lg h-full w-full" />
               </div>
                 
-              <div className="flex flex-col gap-10 font-sans justify-center items-center">
+              <div className="flex flex-col gap-10 font-sans justify-center items-center font-serif">
                 <h1 className="text-2xl font-bold text-wrap ">{proj.title}</h1>
                 <p className="text-sm mt-4 text-wrap text-center ">{proj.description}</p>
-                <button className="p-3 shadow-lg rounded-lg">
-                  <Image src="/icons/github-142-svgrepo-com.svg" alt="" width={30} height={30} />
-                </button>
+                <div className="flex flex-row gap-3">
+                  <button className="p-3 shadow-lg rounded-lg hover:cursor-pointer" onClick={() => window.open(proj.github_link)}>
+                  <Image src={"/icons/github-142-svgrepo-com.svg"} alt="" width={20} height={30} />
+                  </button>
+                  <button className="p-3 shadow-lg rounded-lg hover:cursor-pointer" onClick={() => window.open(proj.hosted_link)}>
+                    <Image src="/icons/link-hyperlink-icon.svg" alt="" width={20} height={30} />
+                  </button>
+                </div>
+                
                 <div className="flex gap-6 p-5 flex-wrap items-center justify-center">
                   {proj.technologies.map((tech) => (
                     <Image
@@ -190,12 +211,27 @@ export default function Projects() {
                     <h1 className="text-3xl font-bold">
                       {selectedProject.title}
                     </h1>
-                    <div>
-                      <Image src={selectedProject.featured_img} alt={selectedProject.title} width={400} height={300} />
-                    </div>
+                    
                     <Swiper>
+                      {selectedProject.project_pics.map((pic) => (
+                        <SwiperSlide key={pic}>
+                        <div className="flex flex row justify-center items-center mt-20 rounded-lg">
+                          <Image height={300} width={1000} src={pic} alt="" />
+                        </div>
+                      </SwiperSlide>
+
+
+                      ))}
+                      
 
                     </Swiper>
+
+
+                    <div className="text-xl font-serif text-left mt-20 font-bold">
+                      <h1>Case Study</h1>
+
+                    </div>
+                    
 
                     <p className="mt-4 text-gray-600">
                       {selectedProject.description}
