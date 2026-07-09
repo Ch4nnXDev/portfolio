@@ -30,7 +30,7 @@ export default function Experience() {
             company: "Da Vinci Ceramics",
             location: "Nugegoda, Sri Lanka",
             duration: "2026 Feb 1 - 2026 Present",
-            description: "Responsible for designing and developing the company's website, implementing digital marketing strategies, and optimizing online presence to drive business growth.",
+            description: "- Optimized website performance by improving Largest Contentful Paint (LCP) and First Contentful Paint (FCP) through technical audits and front-end performance enhancements. - Managed the complete WordPress lifecycle, including updates, plugin management, maintenance, backups, and performance optimization. - Configured and maintained Google Tag Manager (GTM) by creating, testing, and deploying tracking tags, triggers, and variables to support analytics and marketing initiatives. - Designed, implemented, and optimized marketing funnels, conducting experiments to improve user engagement and conversion rates. - Performed website security audits, monitored and mitigated malicious crawl bot activity, and implemented measures to protect website performance and search engine visibility. - Analyzed and managed Meta Ads campaigns, monitoring key performance metrics, optimizing audience targeting, and improving campaign effectiveness through data-driven decisions.",
             skills: [
                 {Name: "WordPress", Icon: "/icons/wordpress-2.svg"},
                 {Name: "WooCommerce", Icon: "/icons/woocommerce-svgrepo-com.svg"},
