@@ -12,7 +12,7 @@ export default function Header() {
         </ul>
       </nav>
 
-      <div className="md:hiddenabsolute top-5">
+      <div className="lg:hidden absolute top-5">
         <nav>
           <ul className="flex flex-col gap-4">
             <li><a href="#home">Home</a></li>
