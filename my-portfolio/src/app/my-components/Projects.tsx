@@ -202,7 +202,7 @@ export default function Projects() {
         {selectedProject && (
                 <div className="fixed inset-0 z-50 bg-black/70 flex items-center w-[100vw] h-[100vh] justify-center">
                   
-                  <div className="bg-white w-full h-full rounded-xl p-10 relative">
+                  <div className="bg-white w-full h-full rounded-xl p-10 relative overflow-y-auto">
                     
                    
                     
@@ -216,7 +216,7 @@ export default function Projects() {
                       {selectedProject.project_pics.map((pic) => (
                         <SwiperSlide key={pic}>
                         <div className="flex flex row justify-center items-center mt-20 rounded-lg">
-                          <Image height={300} width={1000} src={pic} alt="" />
+                          <Image height={300} width={1000} src={pic} alt="" className="p-15" />
                         </div>
                       </SwiperSlide>
 
