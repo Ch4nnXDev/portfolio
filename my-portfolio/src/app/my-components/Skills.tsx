@@ -4,7 +4,6 @@ import Image from "next/image";
 
 export default function Skills() {
 
-    const [hovered, sethovered] = useState(false);
     const [technology, setTechnology] = useState<string>("Programming Languages");
 
     
