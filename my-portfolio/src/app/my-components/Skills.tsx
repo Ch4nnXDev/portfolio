@@ -1,235 +1,31 @@
-'use client'
-import { useState } from "react";
+"use client";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { useLayoutEffect, useRef, useState } from "react";
+
+const skills = [
+  { category: "Languages", items: [["JavaScript", "javascript-svgrepo-com.svg"], ["TypeScript", "typescript-svgrepo-com.svg"], ["Python", "python-svgrepo-com.svg"], ["Java", "java-ar21.svg"], ["PHP", "PHP.svg"]] },
+  { category: "Frameworks", items: [["React", "react-javascript-js-framework-facebook-svgrepo-com.svg"], ["Next.js", "nextjs-svgrepo-com.svg"], ["Node.js", "node-js-svgrepo-com.svg"], ["Express", "express-svgrepo-com.svg"], ["Spring Boot", "spring-boot-icon.svg"], ["FastAPI", "FastAPI.svg"]] },
+  { category: "Data & AI", items: [["PostgreSQL", "postgresql-logo-svgrepo-com.svg"], ["MongoDB", "mongodb-logo-svgrepo-com.svg"], ["TensorFlow", "TensorFlow.svg"], ["PyTorch", "PyTorch.svg"], ["LangChain", "Langchain.svg"], ["Pandas", "Pandas.svg"]] },
+  { category: "Cloud & tools", items: [["AWS", "aws-svgrepo-com.svg"], ["Azure", "azure-svgrepo-com.svg"], ["Docker", "Docker.svg"], ["Cloudflare", "Cloudflare.svg"], ["Kafka", "Apache Kafka.svg"], ["Postman", "Postman.svg"]] },
+];
 
 export default function Skills() {
-
-    const [technology, setTechnology] = useState<string>("Programming Languages");
-
-    
-    const skills = [
-        {
-            category: "Programming Languages",
-            items: [
-                {
-                name: "JavaScript",
-                icon: "icons/javascript-svgrepo-com.svg",
-                proficiency: "Advanced"
-            },
-            {
-                name: "TypeScript",
-                icon: "icons/typescript-svgrepo-com.svg",
-                proficiency: "Advanced"
-            },
-            {
-                name: "Python",
-                icon: "icons/python-svgrepo-com.svg",
-                proficiency: "Advanced"
-            },
-            {
-                name: "Java",
-                icon: "icons/java-ar21.svg",
-                proficiency: "Advanced"
-
-            },
-            {
-                name: "PHP",
-                icon: "icons/PHP.svg",
-                proficiency: "intermediate"
-            }
-        ]
-        },
-        {
-            category: "Frameworks & Libraries",
-            items: [
-                {
-                name: "React",
-                icon: "icons/react-javascript-js-framework-facebook-svgrepo-com.svg",
-                proficiency: "Intermediate"
-                
-            },
-            {
-                name: "NextJs",
-                icon: "icons/nextjs-svgrepo-com.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "NodeJs",
-                icon: "icons/node-js-svgrepo-com.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "ExpressJs",
-                icon: "icons/express-svgrepo-com.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "Springboot",
-                icon: "icons/spring-boot-icon.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "Angular",
-                icon: "icons/Angular.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "FastAPI",
-                icon: "icons/FastAPI.svg",
-                proficiency: "Intermediate"
-            }
-        ]
-            
-        },
-        {
-            category: "Databases",
-            items: [
-                {
-                name: "MongoDB",
-                icon: "icons/mongodb-logo-svgrepo-com.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "MySQL",
-                icon: "icons/nextjs-svgrepo-com.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "PostgreSQL",
-                icon: "icons/postgresql-logo-svgrepo-com.svg",
-                proficiency: "Intermediate"
-            },
-        ]
-        },
-        {
-            category: "Tools & Platforms",
-            items: [
-                {
-                name: "Git",
-                icon: "icons/github-142-svgrepo-com.svg",
-                
-            },
-            {
-                name: "vscode",
-                icon: "icons/Visual Studio Code (VS Code).svg",
-                
-            },
-            {
-                name: "intelij",
-                icon: "icons/IntelliJ IDEA.svg",
-                
-            },
-            {
-                name: "postman",
-                icon: "icons/Postman.svg",
-                
-            }
-       
-        ]
-        },
-        {
-            category: "Ai & Machine Learning",
-            items: [
-                {
-                name: "TensorFlow",
-                icon: "icons/TensorFlow.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "PyTorch",
-                icon: "icons/PyTorch.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "Langchain",
-                icon: "icons/Langchain.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "scikit-learn.svg",
-                icon: "icons/scikit-learn.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "Numpy",
-                icon: "icons/PyTorch.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "Pandas",
-                icon: "icons/Pandas.svg",
-                proficiency: "Intermediate"
-            },
-            {
-                name: "HuggingFace",
-                icon: "icons/huggingface.svg",
-                proficiency: "Intermediate"
-            }
-        ]
-        },
-        {
-            category: "Cloud & Infrastructure",
-            items: [
-                {
-                    name: "AWS",
-                    icon: "icons/aws-svgrepo-com.svg",
-                    proficiency: "Intermediate"
-                },
-                {
-                    name: "Azure",
-                    icon: "icons/azure-svgrepo-com.svg",
-                    proficiency: "Intermediate"
-                },
-                {
-                    name: "Vercel",
-                    icon: "icons/vercel-svgrepo-com.svg",
-                    proficiency: "Intermediate"
-                },
-                {
-                    name: "Apache Kafka",
-                    icon: "icons/Apache Kafka.svg",
-                    proficiency: "Intermediate"
-                },
-                {
-                    name: "Cloudflare",
-                    icon: "icons/Cloudflare.svg",
-                    proficiency: "Intermediate"
-                }
-            ]
-        }
-     
-    ]
-    return (
-        <section className="flex flex-col p-8 w-full items-center mt-40 p-20" id="skills">
-            <h2 className="text-3xl font-bold mb-8">Skills</h2>
-            <div className="flex flex-row gap-6 p-4">
-                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Programming Languages")}>Programming Languages</button>
-                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Frameworks & Libraries")}>Frameworks & Libraries</button>
-                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Databases")}>Databases</button>
-                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Tools & Platforms")}>Tools & Platforms</button>
-                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Ai & Machine Learning")}>Ai & Machine Learning</button>
-                <button className="shadow-md border-radius-10 p-4 rounded-2xl hover:bg-gray-200 transition duration-300" onClick={() => setTechnology("Cloud & Infrastructure")}>Cloud & Infrastructure</button>
-            </div>
-            <div>
-                {skills.map((skill, index) => (
-                    <div key={index}>
-                        {skill.category === technology ? <span className="flex flex-row gap-15 p-4 mt-30 mb-40">
-                            {skill.items.map((tech) => (
-                                <Image 
-                                className="hover:blur-sm transition duration-600 rounded-sm"
-                                key={tech.name}
-                                src={tech.icon}
-                                alt=""
-                                height={80}
-                                width={80}
-                                />
-                            ))}
-                        </span> : <span></span>}
-                    </div>
-                ))}
-            </div>
- 
-            
-        </section>
-    );
+  const [selected, setSelected] = useState(0);
+  const section = useRef<HTMLElement>(null);
+  const grid = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !section.current) return;
+    gsap.registerPlugin(ScrollTrigger);
+    const context = gsap.context(() => gsap.from("[data-skills-heading]", { opacity: 0, y: 24, duration: 0.65, ease: "power3.out", scrollTrigger: { trigger: section.current, start: "top 75%", once: true } }), section);
+    return () => context.revert();
+  }, []);
+  useLayoutEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !grid.current) return;
+    const context = gsap.context(() => gsap.from("[data-skill]", { opacity: 0, y: 12, scale: 0.96, stagger: 0.055, duration: 0.35, ease: "power2.out" }), grid);
+    return () => context.revert();
+  }, [selected]);
+  return <section ref={section} id="skills" className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28 lg:px-14"><div data-skills-heading className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">Capabilities</p><h2 className="mt-3 font-serif text-4xl text-slate-950 sm:text-5xl">Tools I work with.</h2></div><p className="max-w-sm leading-7 text-slate-600">A practical stack for product development, data work, and reliable deployment.</p></div><div className="mt-10 flex gap-2 overflow-x-auto pb-2" role="tablist">{skills.map((group, index) => <button key={group.category} role="tab" aria-selected={selected === index} onClick={() => setSelected(index)} className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition ${selected === index ? "bg-slate-950 text-white" : "border border-slate-200 bg-white text-slate-600 hover:border-slate-400"}`}>{group.category}</button>)}</div><div ref={grid} className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">{skills[selected].items.map(([name, icon]) => <div data-skill key={name} className="flex min-h-28 flex-col items-center justify-center rounded-2xl border border-slate-200 bg-white/80 p-4 text-center shadow-sm"><Image src={`/icons/${icon}`} alt="" width={42} height={42} className="h-10 w-10 object-contain" /><span className="mt-3 text-sm font-medium text-slate-700">{name}</span></div>)}</div></section>;
 }

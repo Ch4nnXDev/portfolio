@@ -1,35 +1,27 @@
 
+"use client";
+
+import { List, X } from "@phosphor-icons/react";
+import { useState } from "react";
+
 export default function Header() {
-  
+  const [open, setOpen] = useState(false);
+  const links = ["Home", "About", "Skills", "Experience", "Projects"];
+
   return (
-    <header className="fixed top-5 left-20 translate-x-1/2 z-100">
-      <nav className="flex items-center gap-10 bg-transparent backdrop-blur-xl border border-white/20 shadow-xl rounded-full px-30 py-8">
-        <ul className="flex items-center gap-10">
-          <li><a href="#home" className="text-xl font-semibold hover:text-blue-800">Home</a></li>
-          <li><a href="#projects" className="text-xl font-semibold hover:text-blue-800">Projects</a></li>
-          <li><a href="#skills" className="text-xl font-semibold hover:text-blue-800">Skills</a></li>
-          <li><a href="#experience" className="text-xl font-semibold hover:text-blue-800">Experience</a></li>
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
+      <nav className="mx-auto flex max-w-5xl items-center justify-between rounded-2xl border border-white/60 bg-white/75 px-4 py-3 shadow-lg shadow-slate-900/5 backdrop-blur-xl sm:px-6">
+        <a href="#home" className="font-serif text-lg font-semibold tracking-tight">CK.</a>
+        <ul className="hidden items-center gap-6 md:flex">
+          {links.map((link) => <li key={link}><a href={`#${link.toLowerCase()}`} className="text-sm font-medium text-slate-600 transition hover:text-blue-700">{link}</a></li>)}
         </ul>
+        <button onClick={() => setOpen((value) => !value)} className="rounded-lg p-1.5 text-slate-700 md:hidden" aria-expanded={open} aria-label="Toggle navigation">
+          {open ? <X size={24} /> : <List size={24} />}
+        </button>
       </nav>
-
-      <div className="lg:hidden absolute top-5">
-        <nav>
-          <ul className="flex flex-col gap-4">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-          </ul>
-        </nav>
-      </div>
-
-
-
+      {open && <div className="mx-auto mt-2 max-w-5xl rounded-2xl border border-white/60 bg-white/95 p-2 shadow-lg backdrop-blur-xl md:hidden">
+        {links.map((link) => <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setOpen(false)} className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100">{link}</a>)}
+      </div>}
     </header>
-
-    
-
-
-    
   );
 }

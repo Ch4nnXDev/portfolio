@@ -1,101 +1,13 @@
 "use client";
-import {useEffect, useRef} from 'react';
 
-import { Swiper, SwiperSlide} from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect, useRef } from "react";
+
+const roles = [{ title: "Web Developer & Digital Marketing Executive", company: "Da Vinci Ceramics", date: "Feb 2026 — Present", text: "Improving web performance, managing the WordPress lifecycle, implementing analytics, and using data to optimise customer journeys and campaigns.", skills: ["Web performance", "WordPress", "Analytics", "Growth"] }, { title: "Software Engineer Intern", company: "Sri Lanka Telecom", date: "Jun 2025 — May 2026", text: "Contributed to enterprise systems, from CRUD interfaces for fraud-call management to reusable Angular components and role-based access control.", skills: ["Angular", "Python", "CodeIgniter", "Enterprise systems"] }];
 
 export default function Experience() {
-
-    const experience = [
-        {
-            position: "Software Engineer Intern",
-            company: "Sri Lanka Telecom",
-            location: "SLT Head Office",
-            duration: "2025 June 16 - 2026 May 16",
-            description: "I was assigned to IT Solutions Developement Section of Sri Lanka Telecom HQ, During my Internship I was exposed to how big companies Manage their work and how different teacm and sections work together to achieve a common goal, at the intial stage of my internship i was assigned a project which is a Fraud Call Management System, built using python as the backend and Bootstrap was used for the frontend i collabated by building CRUD Opeartions and UI Models, After the inital stage i was offered the opprtunity to icdependently built a User Interface for the RIBE System, it was a which is a Telecom Operations Management System, I built it using AngularJS by Making Reusable Components. I was Also Assigned to Make RBAC (Role Based Access Control) for a Custom CRM System, which used PHP Framework CodeIgniter.",
-            skills: [
-                {Name: "NodeJs", Icon: "/icons/node-js-svgrepo-com.svg"},
-                {Name: "React", Icon: "/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"},
-                {Name: "NextJs", Icon: "/icons/nextjs-svgrepo-com.svg"},
-                {Name: "Postgres", Icon: "/icons/postgresql-logo-svgrepo-com.svg"},
-                {Name: "Express", Icon: "/icons/express-svgrepo-com.svg"},
-                {Name: "Render", Icon: "/icons/Render Symbol SVG.svg"},
-                {Name: "Vercel", Icon: "/icons/vercel-svgrepo-com.svg"}
-            
-            ]
-        },
-        {
-            position: "Web Developer And Digital Marketing Executive",
-            company: "Da Vinci Ceramics",
-            location: "Nugegoda, Sri Lanka",
-            duration: "2026 Feb 1 - 2026 Present",
-            description: "- Optimized website performance by improving Largest Contentful Paint (LCP) and First Contentful Paint (FCP) through technical audits and front-end performance enhancements. - Managed the complete WordPress lifecycle, including updates, plugin management, maintenance, backups, and performance optimization. - Configured and maintained Google Tag Manager (GTM) by creating, testing, and deploying tracking tags, triggers, and variables to support analytics and marketing initiatives. - Designed, implemented, and optimized marketing funnels, conducting experiments to improve user engagement and conversion rates. - Performed website security audits, monitored and mitigated malicious crawl bot activity, and implemented measures to protect website performance and search engine visibility. - Analyzed and managed Meta Ads campaigns, monitoring key performance metrics, optimizing audience targeting, and improving campaign effectiveness through data-driven decisions.",
-            skills: [
-                {Name: "WordPress", Icon: "/icons/wordpress-2.svg"},
-                {Name: "WooCommerce", Icon: "/icons/woocommerce-svgrepo-com.svg"},
-                {Name: "Elementor", Icon: "/icons/elementor-svgrepo-com.svg"},
-                {Name: "Google Ads", Icon: "/icons/google-ads-svgrepo-com.svg"},
-                {Name: "Meta Ads", Icon: "/icons/meta-ads-svgrepo-com.svg"},
-                {Name: "Semrush", Icon: "/icons/semrush-svgrepo-com.svg"},
-                {Name: "Google Analytics", Icon: "/icons/google-analytics-svgrepo-com.svg"}
-
-            ]
-        }
-
-        
-    ]
-
-    const boxRef = useRef(null);
-
-
-    useEffect(() => {
-        
-        
-    }, []);
-    return (
-        <section className=" w-full">
-            <h2 className="p-20 text-3xl font-bold">Experience</h2>
-            <Swiper modules={[Pagination]} pagination={{ clickable: true }} slidesPerView={1} className="w-full ">
-            {experience.map((exp) => (
-                <SwiperSlide key={exp.position}>
-                    <div className="grid grid-cols-4 shadow-md items-center p-2 m-20 gap-2 rounded-xl rounded-lg" >
-                
-                        <div ref={boxRef} className="h-30 p-10 rounded-lg col-span-3 shadow-lg bg-white text-center text-lg">{exp.position}</div>
-                        <div className="h-30 p-10 rounded-lg col-span-1 shadow-lg bg-white text-center text-lg">{exp.duration}</div>
-                        <div className="h-30 p-10 rounded-lg col-span-2 bg-white shadow-lg text-center text-lg sm:text-sm">{exp.location}</div>
-                       
-                        <div className="h-30 p-10  bg-white rounded-lg col-span-2 shadow-lg text-center text-lg">{exp.company}</div>
-
-                        <div className="h-100 p-10 bg-white rounded-lg col-span-2 shadow-lg text-center text-md">{exp.description}</div>
-                        
-                        <div className="h-100 p-10 rounded-lg bg-white col-span-2 shadow-lg text-center text-lg">
-                            {exp.skills.map((skill, index) => (
-                                <span key={index} className="inline-block m-2 p-2 bg-gray-200 rounded-lg">
-                                    
-                                    <p>{skill.Name}</p>
-                                </span>
-                            ))}
-                        </div>
-                         
-                
-                
-                        
-                        
-                
-        
-
-                    </div>
-            
-                </SwiperSlide>
-            
-
-                ))}
-            </Swiper>
-            
-            
-
-        </section>
-        
-    );
+  const section = useRef<HTMLElement>(null);
+  useLayoutEffect(() => { if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !section.current) return; gsap.registerPlugin(ScrollTrigger); const context = gsap.context(() => gsap.from("[data-role]", { opacity: 0, y: 30, duration: 0.65, stagger: 0.15, ease: "power3.out", scrollTrigger: { trigger: section.current, start: "top 72%", once: true } }), section); return () => context.revert(); }, []);
+  return <section ref={section} id="experience" className="mx-auto max-w-6xl px-6 py-20 sm:px-10 sm:py-28 lg:px-14"><p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">Experience</p><h2 className="mt-3 font-serif text-4xl text-slate-950 sm:text-5xl">Work with impact.</h2><div className="mt-10 grid gap-5 lg:grid-cols-2">{roles.map((role) => <article data-role key={role.title} className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm sm:p-8"><div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between"><div><h3 className="text-xl font-semibold text-slate-900">{role.title}</h3><p className="mt-1 font-medium text-blue-700">{role.company}</p></div><time className="text-sm text-slate-500">{role.date}</time></div><p className="mt-6 leading-7 text-slate-600">{role.text}</p><div className="mt-6 flex flex-wrap gap-2">{role.skills.map((skill) => <span key={skill} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">{skill}</span>)}</div></article>)}</div></section>;
 }
