@@ -39,6 +39,15 @@ const personalProjects: Project[] = [
     details:
       "An information-retrieval workflow that finds relevant source material and uses it to generate context-aware, useful responses.",
   },
+  {
+    title: "Product HTTP Server With GO",
+    image: "/project-images/http.png",
+    description: 
+    "Production-ready HTTP server built in Go using the standard net/http package.",
+    technologies: ["go package net", "go package log"],
+    github: "https://github.com/Ch4nnXDev/Production-HTTP-Server",
+    details: "Custom routing, middleware, request IDs, request logging, panic recovery, server timeouts, and graceful shutdown for reliable operation."
+  },
 ];
 
 const productionProjects: Project[] = [
