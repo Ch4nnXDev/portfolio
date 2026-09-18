@@ -23,7 +23,7 @@ const personalProjects: Project[] = [
     image: "/project-images/chatapp.png",
     description:
       "A real-time chat system designed around a microservices architecture.",
-    technologies: ["Node.js", "Socket.io", "React", "MongoDB", "Docker"],
+    technologies: ["Node.js", "Socket.io", "React", "MongoDB", "Docker", "Kafka", "micro-services", "expressjs", "redis"],
     github:
       "https://github.com/Ch4nnXDev/Distributed-Chat-Application",
     details:
@@ -34,7 +34,7 @@ const personalProjects: Project[] = [
     image: "/project-images/rag-app.jpg",
     description:
       "A retrieval-augmented generation application for grounded answers.",
-    technologies: ["Python", "LangChain", "React"],
+    technologies: ["Python", "LangChain", "React", "hugging-face", "chromaDB"],
     github: "https://github.com/Ch4nnXDev/graph-rag-app",
     details:
       "An information-retrieval workflow that finds relevant source material and uses it to generate context-aware, useful responses.",
