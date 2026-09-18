@@ -34,7 +34,7 @@ const personalProjects: Project[] = [
     image: "/project-images/rag-app.jpg",
     description:
       "A retrieval-augmented generation application for grounded answers.",
-    technologies: ["Python", "LangChain", "React", "hugging-face", "chromaDB"],
+    technologies: ["Python", "LangChain", "React", "hugging-face", "chromaDB", "flask", "neo4j"],
     github: "https://github.com/Ch4nnXDev/graph-rag-app",
     details:
       "An information-retrieval workflow that finds relevant source material and uses it to generate context-aware, useful responses.",
