@@ -30,14 +30,14 @@ const personalProjects: Project[] = [
       "A production-oriented real-time chat platform designed for multi-room conversations, authentication, persistence, and service-to-service communication.",
   },
   {
-    title: "RAG Application with FLAN-T5",
+    title: "Graph-Based Retrieval-Augmented Generation (Graph RAG)",
     image: "/project-images/rag-app.jpg",
     description:
-      "A retrieval-augmented generation application for grounded answers.",
-    technologies: ["Python", "LangChain", "React", "hugging-face", "chromaDB", "flask", "neo4j"],
+      "A Graph RAG application that combines knowledge-graph retrieval with language-model generation to produce grounded, context-aware answers.",
+    technologies: ["Python", "LangChain", "React", "Hugging-Face", "ChromaDB", "Flask", "Neo4j", "Flan-T5"],
     github: "https://github.com/Ch4nnXDev/graph-rag-app",
     details:
-      "An information-retrieval workflow that finds relevant source material and uses it to generate context-aware, useful responses.",
+      "Combines vector search and graph-based retrieval to identify relevant information before passing enriched context to an LLM for grounded response generation",
   },
   {
     title: "Production HTTP Server With GO (Infra)",
