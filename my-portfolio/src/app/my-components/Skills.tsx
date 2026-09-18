@@ -8,8 +8,9 @@ import { useLayoutEffect, useRef, useState } from "react";
 const skills = [
   { category: "Languages", items: [["JavaScript", "javascript-svgrepo-com.svg"], ["TypeScript", "typescript-svgrepo-com.svg"], ["Python", "python-svgrepo-com.svg"], ["Java", "java-ar21.svg"], ["PHP", "PHP.svg"], ["GO", "GoLogo.svg"]] },
   { category: "Frameworks", items: [["React", "react-javascript-js-framework-facebook-svgrepo-com.svg"], ["Next.js", "nextjs-svgrepo-com.svg"], ["Node.js", "node-js-svgrepo-com.svg"], ["Express", "express-svgrepo-com.svg"], ["Spring Boot", "spring-boot-icon.svg"], ["FastAPI", "FastAPI.svg"], ["Laravel", "Laravel.svg"]] },
-  { category: "Data & AI", items: [["PostgreSQL", "postgresql-logo-svgrepo-com.svg"], ["MongoDB", "mongodb-logo-svgrepo-com.svg"], ["TensorFlow", "TensorFlow.svg"], ["PyTorch", "PyTorch.svg"], ["LangChain", "Langchain.svg"], ["Pandas", "Pandas.svg"]] },
-  { category: "Cloud & tools", items: [["AWS", "aws-svgrepo-com.svg"], ["Azure", "azure-svgrepo-com.svg"], ["Docker", "Docker.svg"], ["Cloudflare", "Cloudflare.svg"], ["Kafka", "Apache Kafka.svg"], ["Postman", "Postman.svg"]] },
+  { category: "Data & AI", items: [["PostgreSQL", "postgresql-logo-svgrepo-com.svg"], ["MongoDB", "mongodb-logo-svgrepo-com.svg"], ["TensorFlow", "TensorFlow.svg"], ["PyTorch", "PyTorch.svg"], ["LangChain", "Langchain.svg"], ["Pandas", "Pandas.svg"], ["ChromaDB", "chromaDB.svg"], ["Neo4j", "neo4j.svg"]] },
+  { category: "Cloud & tools", items: [["AWS", "aws-svgrepo-com.svg"], ["Azure", "azure-svgrepo-com.svg"], ["Docker", "Docker.svg"], ["Cloudflare", "Cloudflare.svg"], ["Kafka", "Apache Kafka.svg"], ["Postman", "Postman.svg"], ["Redis", "redis-logo.svg"]] },
+
 ];
 
 export default function Skills() {
