@@ -40,7 +40,7 @@ const personalProjects: Project[] = [
       "An information-retrieval workflow that finds relevant source material and uses it to generate context-aware, useful responses.",
   },
   {
-    title: "Product HTTP Server With GO",
+    title: "Production HTTP Server With GO (Infra)",
     image: "/project-images/http.png",
     description: 
     "Production-ready HTTP server built in Go using the standard net/http package.",
@@ -48,6 +48,15 @@ const personalProjects: Project[] = [
     github: "https://github.com/Ch4nnXDev/Production-HTTP-Server",
     details: "Custom routing, middleware, request IDs, request logging, panic recovery, server timeouts, and graceful shutdown for reliable operation."
   },
+  {
+    title: "Peer-to-Peer Networking System",
+    image: "/project-images/p2p.png",
+    description: "A lightweight peer-to-peer networking system built with Node.js TCP sockets.",
+    technologies: ["NodeJs", "Event-Driven Architecture", "Javascript", "TCP"],
+    github: "https://github.com/Ch4nnXDev/Production-Peer2Peer-Network",
+    details: "Implements peer discovery, TCP connections, handshaking, message framing, peer management, JSON-based protocols, and event-driven message routing."
+  }
+
 ];
 
 const productionProjects: Project[] = [
