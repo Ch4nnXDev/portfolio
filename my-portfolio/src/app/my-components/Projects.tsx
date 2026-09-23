@@ -55,6 +55,14 @@ const personalProjects: Project[] = [
     technologies: ["NodeJs", "Event-Driven Architecture", "Javascript", "TCP"],
     github: "https://github.com/Ch4nnXDev/Production-Peer2Peer-Network",
     details: "Implements peer discovery, TCP connections, handshaking, message framing, peer management, JSON-based protocols, and event-driven message routing."
+  },
+  {
+    title: "Student and Teacher Pathway Management System",
+    image: "/project-images/student-teacher.png",
+    description: "a student and teacher management system made using laravel and nextjs",
+    technologies: ["Laravel", "NextJs", "Dynamic-Routes", "Laravel Worker"],
+    github: "https://github.com/Ch4nnXDev/Student-Teacher-Pathway-Tool",
+    details: "seperated role based access and student reports are assgined to a worker through a queue"
   }
 
 ];
