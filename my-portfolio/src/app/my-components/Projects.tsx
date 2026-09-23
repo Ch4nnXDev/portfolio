@@ -73,11 +73,11 @@ const productionProjects: Project[] = [
   },
 
   {
-    title: "Ceramics Product Catalogue & PWA",
+    title: "Ceramics Product Catalogue & PWA + Agent",
     image: "/project-images/davinci.png",
     description:
       "A progressive web application built to help sales teams browse and also keep track of the stock.",
-    technologies: ["Next.js", "TypeScript", "Supabase", "Google Sheets API", "PWA"],
+    technologies: ["Next.js", "TypeScript", "Supabase", "Google Sheets API", "PWA", "Vercel Agent SDK", "Groq"],
     details:
       "Designed and developed a product catalogue PWA for a ceramics business, including product discovery, responsive interfaces, authentication, product data integration, and mobile-focused workflows for sales teams.",
   },
